@@ -2,6 +2,8 @@
 
 Cayenne
 
+Add new... -> Device/Widget -> Raspberry Pi
+
 Run the following commands in order to avoid the error described here http://community.mydevices.com/t/build-for-python-3-4-2-failed-n/1540
 
 ```
