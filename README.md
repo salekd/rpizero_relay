@@ -90,7 +90,9 @@ wget http://distfiles.macports.org/openfst/openfst-1.3.4.tar.gz
 wget https://github.com/mitlm/mitlm/releases/download/v0.4.1/mitlm_0.4.1.tar.gz
 wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/m2m-aligner/m2m-aligner-1.2.tar.gz
 wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phonetisaurus/is2013-conversion.tgz
+```
 
+```
 tar -xvf m2m-aligner-1.2.tar.gz
 tar -xvf openfst-1.3.4.tar.gz
 tar -xvf is2013-conversion.tgz
@@ -101,6 +103,7 @@ tar -xvf mitlm_0.4.1.tar.gz
 cd openfst-1.3.4/
 sudo ./configure --enable-compact-fsts --enable-const-fsts --enable-far --enable-lookahead-fsts --enable-pdt
 sudo make install
+cd ..
 ```
 
 ```
