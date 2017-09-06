@@ -79,9 +79,70 @@ sudo apt-get install subversion autoconf libtool automake gfortran g++ --yes
 svn co https://svn.code.sf.net/p/cmusphinx/code/trunk/cmuclmtk/
 cd cmuclmtk/
 ./autogen.sh && make && sudo make install
+cd ..
 ```
 
 
+Install Phonetisaurus, m2m-aligner and MITLM:
+
+```
+wget http://distfiles.macports.org/openfst/openfst-1.3.4.tar.gz
+wget https://github.com/mitlm/mitlm/releases/download/v0.4.1/mitlm_0.4.1.tar.gz
+wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/m2m-aligner/m2m-aligner-1.2.tar.gz
+wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phonetisaurus/is2013-conversion.tgz
+
+tar -xvf m2m-aligner-1.2.tar.gz
+tar -xvf openfst-1.3.4.tar.gz
+tar -xvf is2013-conversion.tgz
+tar -xvf mitlm_0.4.1.tar.gz
+```
+
+```
+cd openfst-1.3.4/
+sudo ./configure --enable-compact-fsts --enable-const-fsts --enable-far --enable-lookahead-fsts --enable-pdt
+sudo make install
+```
+
+```
+cd m2m-aligner-1.2/
+sudo make
+cd ..
+```
+
+```
+cd mitlm-0.4.1/
+sudo ./configure
+sudo make install
+cd ..
+```
+
+```
+cd is2013-conversion/phonetisaurus/src
+sudo make
+cd
+```
+
+```
+sudo cp ~/m2m-aligner-1.2/m2m-aligner /usr/local/bin/m2m-aligner
+sudo cp ~/is2013-conversion/bin/phonetisaurus-g2p /usr/local/bin/phonetisaurus-g2p
+```
+
 Build the Phonetisaurus FST model:
+
+```
+wget https://www.dropbox.com/s/kfht75czdwucni1/g014b2b.tgz
+tar -xvf g014b2b.tgz
+```
+
+```
+cd g014b2b/
+./compile-fst.sh
+cd ..
+```
+
+```
+mv ~/g014b2b ~/phonetisaurus
+```
+
 
 Install dependencies for Julius STT engine:
