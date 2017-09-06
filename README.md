@@ -52,6 +52,13 @@ options snd slots=snd_usb_audio,snd_bcm2835
 
 Jasper
 
+Add the following lines to .bashrc
+
+```
+export LD_LIBRARY_PATH="/usr/local/lib"
+export PATH=$PATH:/usr/local/lib/
+```
+
 ```
 git clone https://github.com/jasperproject/jasper-client.git
 ```
