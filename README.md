@@ -27,3 +27,27 @@ WebIOPi successfully installed
 
 * Look in /tmp/webiopi/examples for Python library usage examples
 ```
+
+
+Audio
+
+http://jasperproject.github.io/documentation/installation/
+
+```
+sudo apt-get install git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
+```
+
+
+Create file /lib/modprobe.d/jasper.conf
+
+```
+# Load USB audio before the internal soundcard
+options snd_usb_audio index=0
+options snd_bcm2835 index=1
+
+# Make sure the sound cards are ordered the correct way in ALSA
+options snd slots=snd_usb_audio,snd_bcm2835
+```
+
+
+Jasper
