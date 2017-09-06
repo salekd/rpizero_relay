@@ -51,3 +51,30 @@ options snd slots=snd_usb_audio,snd_bcm2835
 
 
 Jasper
+
+```
+git clone https://github.com/jasperproject/jasper-client.git
+```
+
+```
+sudo apt-get install python-pip python-dev
+sudo pip install --upgrade setuptools
+sudo pip install -r jasper-client/client/requirements.txt
+```
+
+Install Pocketsphinx:
+
+```
+sudo apt-get update
+sudo apt-get install pocketsphinx python-pocketsphinx
+```
+
+Install CMUCLMTK:
+
+```
+sudo apt-get install subversion autoconf libtool automake gfortran g++ --yes
+```
+
+Build the Phonetisaurus FST model:
+
+Install dependencies for Julius STT engine:
