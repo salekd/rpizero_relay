@@ -75,6 +75,13 @@ Install CMUCLMTK:
 sudo apt-get install subversion autoconf libtool automake gfortran g++ --yes
 ```
 
+```
+svn co https://svn.code.sf.net/p/cmusphinx/code/trunk/cmuclmtk/
+cd cmuclmtk/
+./autogen.sh && make && sudo make install
+```
+
+
 Build the Phonetisaurus FST model:
 
 Install dependencies for Julius STT engine:
