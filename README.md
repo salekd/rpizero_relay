@@ -149,3 +149,21 @@ mv ~/g014b2b ~/phonetisaurus
 
 
 Install dependencies for Julius STT engine:
+
+```
+sudo apt-get update
+sudo apt-get install build-essential zlib1g-dev flex libasound2-dev libesd0-dev libsndfile1-dev
+```
+
+Download http://sourceforge.jp/projects/julius/downloads/60273/julius-4.3.1.tar.gz
+
+```
+tar -xvf julius-4.3.1.tar.gz
+```
+
+```
+cd ~/julius-4.3.1
+./configure --enable-words-int
+make
+sudo make install
+```
