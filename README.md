@@ -6,6 +6,6 @@ This project demonstrates how to use Raspberry Pi Zero with a relay switch for h
 
 For the latter option, an open source tool **Judy** is used. Judy respects privacy and performs the speech recognition directly on Raspberry Pi without a need of an internet connection, relying on a lightweight speech-to-text engine called **PocketSphinx**.
 
-The instructions to build this project are documented here https://github.com/salekd/rpizero_smart_camera/wiki
+The instructions to build this project are documented here https://github.com/salekd/rpizero_relay/wiki
 
 ![](https://github.com/salekd/rpizero_relay/blob/master/relay.JPG)
