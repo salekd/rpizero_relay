@@ -2,7 +2,7 @@
 
 This project demonstrates how to use Raspberry Pi Zero with a relay switch for home automation. The relay switch can be controlled remotely:
 * either through a **Cayenne** dashboard
-* or using an external USB microphone and a speech recognition engine. The relay switch responds to saying "lights on" and "lights off".
+* or using an external USB microphone and a speech recognition engine. The relay switch responds to saying "light on" and "light off".
 
 For the latter option, an open source tool **Judy** is used. Judy respects privacy and performs the speech recognition directly on Raspberry Pi without a need of an internet connection.
 
