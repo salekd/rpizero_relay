@@ -9,8 +9,14 @@ GPIO.setup(18, GPIO.OUT)
 try:  
     while True:
         GPIO.wait_for_edge(14, GPIO.FALLING)  
-        GPIO.output(18, not GPIO.input(18))
-        sleep(1)
+        # If we are here, an edge was recognized.
+        # Debounce for 5 ms
+        sleep(0.005)
+        # Only react to valid edges.
+        if GPIO.input(18) == 0:
+            GPIO.output(18, not GPIO.input(18))
+            sleep(1)
               
 except KeyboardInterrupt:  
-    GPIO.cleanup()       # clean up GPIO on CTRL+C exit  
+    # Clean up GPIO on CTRL+C exit  
+    GPIO.cleanup()
